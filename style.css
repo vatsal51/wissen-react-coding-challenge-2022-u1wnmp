@@ -5,6 +5,11 @@ h1,
 p {
   font-family: Lato;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 form {
   max-width: 400px;
 }
@@ -37,10 +42,16 @@ form button {
   padding: 12px;
   outline: none;
   border: none;
+  font-weight: bold;
   border-radius: 5px;
-  background-color: #1229a2;
+  background-color: #1229a299;
   margin-top: 15px;
+  color: #1229a2;
+  cursor: pointer;
+}
+form button:hover {
   color: #fff;
+  background-color: #1229a2;
 }
 
 form .sso-signin {
