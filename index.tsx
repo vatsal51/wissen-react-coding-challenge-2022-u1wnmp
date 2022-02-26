@@ -103,8 +103,8 @@ const App = () => {
                 <label>Email</label>
                 <input
                   type="text"
-                  onBlur={(e) => setUname(e.target.value)}
-                  defaultValue="eve.holt@reqres.in"
+                  onChange={(e) => setUname(e.target.value)}
+                  value={uname}
                 />
                 <div className="error_email">Pleas Enter Email</div>
               </div>
@@ -112,8 +112,8 @@ const App = () => {
                 <label>Password</label>
                 <input
                   type="password"
-                  onBlur={(e) => setPass(e.target.value)}
-                  defaultValue="cityslicka"
+                  onChange={(e) => setPass(e.target.value)}
+                  value={pass}
                 />
                 <div className="error_pwd">Pleas enter Password</div>
               </div>
