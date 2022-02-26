@@ -43,16 +43,27 @@ form button {
   color: #fff;
 }
 
-form .sso-signin p {
+form .sso-signin {
   text-align: center;
+  padding-top: 50px;
+}
+form .sso-signin a {
   font-weight: bold;
   color: #1229a2;
-  padding-top: 50px;
+  text-decoration: none;
 }
 
 .error_email,
 .error_pwd {
   display: none;
   color: red;
+  font-weight: bold;
+}
+
+.policy {
+  display: flex;
+}
+.policy span {
+  color: #000;
   font-weight: bold;
 }

@@ -20,7 +20,7 @@ const Home = () => {
         .then((response) => {
           return response;
         });
-      console.log(response);
+      console.log(response.data);
     } catch (error) {
       alert('invalid username or passwords');
     }
@@ -28,6 +28,10 @@ const Home = () => {
   return (
     <div>
       <h2>Hello</h2>
+      <div>
+        <ul></ul>
+      </div>
+      >
     </div>
   );
 };

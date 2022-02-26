@@ -13,9 +13,10 @@ import Home from './Home';
 const App = () => {
   const [uname, setUname] = useState('');
   const [pass, setPass] = useState('');
+  const [policy, setPolicy] = useState('');
   const submitForm = async (e) => {
     e.preventDefault();
-    if (uname && pass) {
+    if (uname && pass && policy) {
       try {
         const response = await axios
           .post('https://reqres.in/api/login', {
@@ -42,8 +43,14 @@ const App = () => {
         alert('invalid username or passwords');
       }
     } else {
-      document.querySelector('.error_email').style.display = 'block';
-      document.querySelector('.error_pwd').style.display = 'block';
+      !uname
+        ? (document.querySelector('.error_email').style.display = 'block')
+        : ' ';
+
+      !pass
+        ? (document.querySelector('.error_pwd').style.display = 'block')
+        : ' ';
+
       alert('invalid details');
     }
   };
@@ -56,6 +63,9 @@ const App = () => {
 
   return (
     <Router>
+      {/* <Route path="/home">
+        <Home />
+      </Route> */}
       <div>
         <div>
           <div>
@@ -81,9 +91,12 @@ const App = () => {
                   />
                   <div className="error_pwd">Pleas enter Password</div>
                 </div>
-                <div style={{display:"flex"}}>
+                <div className="policy">
                   <div>
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) => setPolicy(e.target.value)}
+                    />
                   </div>
                   <div>
                     <label htmlFor="">
@@ -96,7 +109,7 @@ const App = () => {
                 <button onClick={submitForm}>Login</button>
 
                 <div className="sso-signin">
-                  <p>Sign in with company SSO</p>
+                  <a href="#/">Sign in with company SSO</a>
                 </div>
               </form>
             </div>
