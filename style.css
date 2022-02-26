@@ -1,22 +1,58 @@
+* {
+  box-sizing: border-box;
+}
 h1,
 p {
   font-family: Lato;
 }
-
+form {
+  max-width: 400px;
+}
 form label {
   display: block;
+  font-weight: bold;
   padding-bottom: 5px;
+  color: gray;
+}
+form input[type='checkbox'] {
+  display: inline-block;
 }
 
-form input {
+form input[type='text'],
+form input[type='password'] {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
+  color: blue;
+  outline-color: gray;
+  border-color: #000;
+}
+form input:focus {
+  border-color: gray;
 }
 
 form button {
-  padding: 20px 30px;
+  width: 100%;
+  padding: 12px;
   outline: none;
   border: none;
   border-radius: 5px;
+  background-color: #1229a2;
+  margin-top: 15px;
+  color: #fff;
+}
+
+form .sso-signin p {
+  text-align: center;
+  font-weight: bold;
+  color: #1229a2;
+  padding-top: 50px;
+}
+
+.error_email,
+.error_pwd {
+  display: none;
+  color: red;
+  font-weight: bold;
 }
